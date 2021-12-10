@@ -1,22 +1,32 @@
 {
   "files": {
-    "main.css": "/north-south/static/css/main.b7162781.chunk.css",
-    "main.js": "/north-south/static/js/main.4351aee7.chunk.js",
-    "main.js.map": "/north-south/static/js/main.4351aee7.chunk.js.map",
+    "main.css": "/north-south/static/css/main.b14b581d.chunk.css",
+    "main.js": "/north-south/static/js/main.cb347038.chunk.js",
+    "main.js.map": "/north-south/static/js/main.cb347038.chunk.js.map",
     "runtime-main.js": "/north-south/static/js/runtime-main.3516cc31.js",
     "runtime-main.js.map": "/north-south/static/js/runtime-main.3516cc31.js.map",
-    "static/js/2.d3f7987d.chunk.js": "/north-south/static/js/2.d3f7987d.chunk.js",
-    "static/js/2.d3f7987d.chunk.js.map": "/north-south/static/js/2.d3f7987d.chunk.js.map",
+    "static/js/2.bb83c9d1.chunk.js": "/north-south/static/js/2.bb83c9d1.chunk.js",
+    "static/js/2.bb83c9d1.chunk.js.map": "/north-south/static/js/2.bb83c9d1.chunk.js.map",
     "index.html": "/north-south/index.html",
-    "static/css/main.b7162781.chunk.css.map": "/north-south/static/css/main.b7162781.chunk.css.map",
-    "static/js/2.d3f7987d.chunk.js.LICENSE.txt": "/north-south/static/js/2.d3f7987d.chunk.js.LICENSE.txt",
+    "static/css/main.b14b581d.chunk.css.map": "/north-south/static/css/main.b14b581d.chunk.css.map",
+    "static/js/2.bb83c9d1.chunk.js.LICENSE.txt": "/north-south/static/js/2.bb83c9d1.chunk.js.LICENSE.txt",
+    "static/media/Crowd2.c8bb9ec5.PNG": "/north-south/static/media/Crowd2.c8bb9ec5.PNG",
+    "static/media/art.f3a08419.jpeg": "/north-south/static/media/art.f3a08419.jpeg",
+    "static/media/blog art.4f8ed314.PNG": "/north-south/static/media/blog art.4f8ed314.PNG",
+    "static/media/global-internet.026499b6.jpg": "/north-south/static/media/global-internet.026499b6.jpg",
+    "static/media/home.ec9c7ac7.PNG": "/north-south/static/media/home.ec9c7ac7.PNG",
+    "static/media/internet art.66066431.PNG": "/north-south/static/media/internet art.66066431.PNG",
+    "static/media/proposal.638b7400.jpeg": "/north-south/static/media/proposal.638b7400.jpeg",
     "static/media/tower.1819fe9f.jpeg": "/north-south/static/media/tower.1819fe9f.jpeg",
-    "static/media/unequal-sa.5384fff6.jpg": "/north-south/static/media/unequal-sa.5384fff6.jpg"
+    "static/media/unequal-sa.jpg": "/north-south/static/media/unequal-sa.5384fff6.jpg",
+    "static/media/unequal-sa2.jpg": "/north-south/static/media/unequal-sa2.1db895c5.jpg",
+    "static/media/unequal-sa3.jpg": "/north-south/static/media/unequal-sa3.3d69824b.jpg",
+    "static/media/unequal-sa4.jpg": "/north-south/static/media/unequal-sa4.9810778f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3516cc31.js",
-    "static/js/2.d3f7987d.chunk.js",
-    "static/css/main.b7162781.chunk.css",
-    "static/js/main.4351aee7.chunk.js"
+    "static/js/2.bb83c9d1.chunk.js",
+    "static/css/main.b14b581d.chunk.css",
+    "static/js/main.cb347038.chunk.js"
   ]
 }
