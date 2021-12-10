@@ -1,0 +1,276 @@
+
+
+.body{
+  color: #555555;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-size: 20px;
+  margin: 0;
+/*background-color: black*/
+
+}
+
+.homeContainer{
+  display:grid;
+  height:100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-areas: "white-area white-area"
+                        "tar-road tar-road"
+                        "black-area black-area"
+  ;
+
+}
+
+.topWhite{
+  grid-area: white-area;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+
+}
+.road{
+  grid-area:tar-road;
+  background-color: #555555;
+}
+.road .centerLine{
+  background:white;
+  position: relative;
+  top: 50%;
+  height: 3px;
+}
+.bottomBlack{
+  grid-area: black-area;
+  background-color: black;
+  height: 45vh;
+  width: 100%;
+}
+.centerLine{
+  background-color: white;
+}
+
+.Disunity{
+  grid-area: white-area;
+  position:relative;
+  color: black;
+  font-size: 75px;
+  /*top: 50px;
+  left: 350px;*/
+  top: 28%;
+  left: 25%;
+}
+
+.Diversity{
+  grid-area: bottom-black;
+  position:relative;
+  color:white;
+  font-size: 75px;
+  /*top: -50px;
+  left: 850px;*/
+  top: 0%;
+  left: 50%;
+}
+
+/*******Buttons**********/
+.homeButton a{
+  text-decoration: none;
+  color:black;
+  font-size: 8vh;
+}
+.homeButton a:hover{
+  color: #555555; 
+}
+
+.navigationButtons{
+  grid-area:tar-road;
+  position: relative;
+  top:62%;
+  left: 6%;
+  justify-content: space-around;
+  align-items: center;
+  
+  z-index: 1;
+  transition: 0.8s ease-in-out;
+  opacity: 1;
+}
+.navigationButtons a{
+  text-decoration: none;
+  color:white;
+  margin-right: 2%;
+}
+.navigationButtons a:hover{
+  z-index: 1;
+  color: #858585;
+  
+}
+
+.menuNavButton{
+  grid-area: tar-road;
+  position: relative;
+  left: 2%;
+  top:60%;
+  display: grid;
+  justify-content:center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+
+ 
+}
+/*navbar*/
+.navbarTop{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.navbarBottom{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbarClicked{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+
+  transform: scaleX(-10x);
+  background: transparent;
+  box-shadow: none;
+  
+}
+.navbarTopClicked{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+
+  transform: rotate(45deg) translateX(7px) translateY(7px);
+  transition: all 0.5s ease-in-out;
+}
+.navbarBottomClicked{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+
+  transform: rotate(-45deg) translateX(7px) translateY(-7px);
+  transition: all 0.5s ease-in-out;
+
+}
+
+
+
+/*******Responsive Home Page**********/
+@media only screen and (max-width: 1020px) {
+  .homeContainer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr;
+    grid-template-areas: "white-area"
+                          "tar-road"
+                          "black-area";
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .Disunity{
+    font-size: 50px;
+    top: 25%;
+  }
+  .Diversity{
+    font-size: 50px;
+    top: -2%;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Disunity{
+    font-size: 50px;
+    top: 25%;
+  }
+  .Diversity{
+    font-size: 50px;
+    top: -2%;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Disunity{
+    font-size: 50px;
+    top: 25%;
+  }
+  .Diversity{
+    font-size: 50px;
+    top: -2%;
+    left: 50%;
+  }
+  .menuNavButton{
+    left: 2%;
+  }
+  .navigationButtons{
+    left: 10%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .navigationButtons{
+    left: 12%;
+  }
+  .homeButton a{
+    position: relative;
+    top:4vh;
+    font-size: 5vh;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .Diversity{
+    font-size: 50px;
+    top: -2%;
+    left: 14vw;
+  }
+  .Disunity{
+    left: 18vw;
+  }
+  .navigationButtons{
+    left: 20%;
+  }
+  .menuNavButton{
+    left: 2%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .Disunity{
+    font-size: 40px;
+    left: 18vw;
+    top: 13vh;
+  }
+  .Diversity{
+    font-size: 40px;
+    left: 15vw;
+  }
+  .menuNavButton{
+    left: 2%;
+  }
+  .navigationButtons{
+    left: 25%;
+  }
+  .homeButton a{
+    position: relative;
+    top:8vh;
+    font-size: 5vh;
+  }
+  
+}

@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*******General Pages Buttons*********/
+
+.restOfNavButtons{
+    display: flex;
+    position: relative;
+    grid-area: navigation;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .restOfNavButtons a{
+    text-decoration: none;
+    position: relative;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+  .restOfNavButtons a:hover{
+      color: #555555;
+  }
+  .regularHomeButton{
+    grid-area: home-nav;
+    background: black; 
+  }
+  .regularHomeButton a{
+    position: relative;
+    top: 25%;
+    left: 84.5%;
+    text-decoration: none;
+    color:whitesmoke;
+    margin-left: 5%;
+    z-index: 1;
+    
+  }
+  .regularHomeButton a:hover{
+    color: #555555; 
+  }
+  /*navbar*/
+  .mobileNavButton{
+    grid-area: navigation;
+    position: relative;
+    left: 90%;
+    top:25%;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  
+   
+  }
+.navbarTop{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbarBottom{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .mobileNavButton.pressed .navbar{
+    transform: scaleX(-10x);
+    background: transparent;
+    box-shadow: none;
+  }
+  .mobileNavButton.pressed .navbarTop{
+    transform: rotate(45deg) translateX(7px) translateY(7px);
+  }
+  .mobileNavButton.pressed .navbarBottom{
+    transform: rotate(-45deg) translateX(7px) translateY(-7px);
+  
+  }
+  /*******General Page Style*********/
+  
+  .mainContainer{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas: "home-nav navigation"
+                          "North South"
+    ;
+    
+  
+  }
+
+  .North{
+
+    background: whitesmoke;
+    grid-area: North;
+  }
+  .NorthHeading{
+    display: flex;
+    justify-content: center;
+    grid-area: headings;
+    margin-bottom: 2rem;
+  }
+  .NorthContainer{
+    grid-area: North;
+    width: 80%;
+    height:80vh;
+    margin: auto;
+    margin-top: 5%;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows:0.1fr 0.8fr 0.2fr;
+    grid-template-areas:  "headings"
+                          "image-area"
+                          "activities-area";
+    
+                          
+  }
+  .South{
+    background: black;
+    grid-area: South;
+  }
+  .SouthContainer{
+    grid-area: South;
+    width: 80%;
+    height:80vh;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows:0.1fr 0.8fr 0.2fr;
+    grid-template-areas:  "headings"
+                          "image-area"
+                          "activities-area";
+  }
+  .SouthHeading{
+
+    display: flex;
+    justify-content: center;
+    grid-area: headings;
+    margin-bottom: 2rem;
+
+  }
+  .SouthImages{
+    position: relative;
+    top: -15%;
+    grid-area: image-area;
+    border: solid white;
+    height: 125%; 
+    
+    overflow: scroll;
+}
+/*::-webkit-scrollbar{
+    width: 0;
+    background-color: transparent;
+    
+}*/
+  .SouthImages img{
+    width: 100%; 
+ 
+  }
+  .SouthBlogs{
+    width: 100%;
+    height: 100%;
+   }
+
+  .NorthImages{
+    position: relative;
+    top: -15%;
+    grid-area: image-area;
+    border: solid black;
+    height: 125%;
+
+    
+    overflow: scroll;
+    /**/
+    opacity: 1;
+    
+    /**/
+  }
+  .ReadNorthImages{
+    position: relative;
+    top: -15%;
+    grid-area: image-area;
+    border: solid black;
+    height: 125%;
+
+    
+    overflow: scroll;
+    /**/
+    opacity: 1;
+    transition: opacity 5s ease-in;
+    /**/
+  }
+
+ 
+  .NorthBlogs{
+      width: 100%;
+      height: 100%;
+    /* transition: opacity 20s;
+      -webkit-transition: opacity 20s;
+      opacity: 0;*/
+
+
+  }
+
+
+  .ScrollButtons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    
+  }
+  .backButton{
+    position: relative;
+    top: 1rem;
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+  }
+  .backButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .nextButton{
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(225deg);
+    margin: 1rem;
+  }
+  .nextButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .ActivitiesButtons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40%;
+
+  }
+  .RechargeButton{
+    padding: 10px;
+
+  }
+  .WorkButton{
+    padding: 10px;
+  }
+  .DBtn{
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .DBtn:hover,.DBtn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .DBtn:active{
+    background: rgb(63, 63, 63);
+  }
+  .ReadBtn{
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .ReadBtn:hover,.DBtn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .ReadBtn:active{
+    background: rgb(63, 63, 63);
+  }
+  .ReadButton{
+    padding: 10px;
+  }
+  .WBtn{
+
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .WBtn:hover,.WBtn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .WBtn:active{
+    background: rgb(63, 63, 63);
+  }
+
+  .Balances{    
+    padding: 4px;
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 90%;
+  }
+
+  /***South Buttons***/
+  .SouthScrollButtons{
+    
+    grid-area: activities-area;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    
+  }
+  /*.South-back{
+    border: solid 2px whitesmoke;
+    background: black;
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    transition: 0.5s ease;
+  }*/
+  .SouthBackButton{
+    position: relative;
+    top: 1rem;
+    border-left: 0.3rem solid whitesmoke;
+    border-bottom: 0.3rem solid whitesmoke;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+    z-index: 1; 
+  }
+  .SouthBackButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+
+  .SouthNextButton{
+    margin: 1rem;
+    border-left: 0.3rem solid whitesmoke;
+    border-bottom: 0.3rem solid whitesmoke;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(225deg);
+    cursor: pointer;
+    z-index: 1; 
+  }
+  .SouthNextButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .SouthActivitiesButtons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40%;
+
+  }
+  .SouthRechargeButton{
+    padding: 10px;
+
+  }
+  .SouthWorkButton{
+    padding: 10px;
+  }
+  .SouthDBtn{
+    outline: none;
+    display: block;
+    border: solid 2px whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .SouthDBtn:hover,.SouthDBtn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .SouthDBtn:active{
+    background: whitesmoke;
+  }
+  .SouthReadBtn{
+    outline: none;
+    display: block;
+    border: solid 2px whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .SouthReadBtn:hover,.SouthReadBtn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .SouthReadBtn:active{
+    background: whitesmoke;
+  }
+  .SouthReadButton{
+    padding: 10px;
+
+  }
+  .SouthWBtn{
+
+    outline: none;
+    display: block;
+    border: solid whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .SouthWBtn:hover,.SouthWBtn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .SouthWBtn:active{
+    background: whitesmoke;
+  }
+
+  .SouthBalances{
+    padding: 4px;
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 90%;
+    color:  white;
+  }
+
+
+  /*********************/
+  @media (max-width: 650px) {
+    .mainContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.4fr 0.4fr;
+        grid-template-areas: "home-nav"
+                              "North"
+                              "South"
+        ;
+    }
+    .regularHomeButton{
+        grid-area: home-nav;
+        background: black;
+        width: 100vw;
+        height: 60px;
+        
+    }    
+
+      
+    .mobileNavButton{
+        grid-area: home-nav;
+        display: grid;
+        left: 90%;
+      
+    }
+
+    .restOfNavButtons {
+        display: none;
+        flex-direction: column;
+        grid-area: North;
+        
+    }
+
+    .regularHomeButton a{
+        left: 25vw;
+      }
+    .NorthImages{
+        height: 110%;  
+    }
+    .ActivitiesButtons{
+        top: -10%;
+    }
+    .Balances{
+        top: 50%;
+    }
+    .SouthImages{
+        height: 110%;  
+    }
+    .SouthActivitiesButtons{
+        top: -10%;
+    }
+    .SouthBalances{
+        top: 50%;
+    }
+  }

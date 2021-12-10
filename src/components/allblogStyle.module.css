@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*******General Pages Buttons*********/
+
+.restOfNavButtons{
+    display: flex;
+    position: relative;
+    grid-area: navigation;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .restOfNavButtons a{
+    text-decoration: none;
+    position: relative;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+  .restOfNavButtons a:hover{
+      color: #555555;
+  }
+  .regularHomeButton{
+    grid-area: home-nav;
+    background: black;
+   
+    
+  
+  }
+  .regularHomeButton a{
+    position: relative;
+    top: 1%;
+    left: 78%;
+    text-decoration: none;
+    color:whitesmoke;
+    margin-left: 5%;
+    z-index: 1;
+  }
+  .regularHomeButton a:hover{
+    color: #555555; 
+  }
+  /*************BACK BUTTON***************/
+  .ScrollButtons{
+    grid-area: home-nav;
+    display: flex;
+    position: relative;
+    left: 8%;
+    bottom: 10%; 
+    
+  }
+  .backButton{
+    position: relative;
+    top: 1rem;
+    border-left: 0.3rem solid white;
+    border-bottom: 0.3rem solid white;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+  }
+  .backButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .nextButton{
+    border-left: 0.3rem solid white;
+    border-bottom: 0.3rem solid white;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(225deg);
+    margin: 1rem;
+  }
+  .nextButton:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  /*navbar*/
+  .mobileNavButton{
+    grid-area: navigation;
+    position: relative;
+    left: 90%;
+    top:25%;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .mobileNavButtonClicked{
+    grid-area: navigation;
+    position: relative;
+    left: 90%;
+    top:25%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+.navbarTop{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbarBottom{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .navbarClicked{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+
+    transform: scaleX(-10x);
+    background: transparent;
+    box-shadow: none;
+  }
+  .navbarTopClicked{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg) translateX(7px) translateY(7px);
+  }
+  .navbarBottomClicked{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-45deg) translateX(7px) translateY(-7px);
+  
+  }
+  /*******General Page Style*********/
+  .blogNames h5{
+    color: black;
+  }
+  .blogNames h5:hover{
+    color: gray;
+  }
+  a{
+    color: black;
+  }
+  a:hover{
+    color: gray;
+  }
+  h2 a{
+    text-decoration: none;
+    color: black;
+  }
+  h2 a:hover{
+    color: gray;
+  }
+  h2 li{
+    /*list-style-type: none;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  ol{
+    margin-left: 1.5%;
+  }
+  p{
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .mainContainer{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas: "home-nav navigation"
+                          "kontent kontent"
+    ;
+  }
+  .articleBackground{
+    background: whitesmoke;
+    grid-area: kontent;
+  }
+  .container{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+  @media (max-width: 650px) {
+    .main-containe{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.9fr;
+        grid-template-areas: "home-nav"
+                              "kontent"
+        ;
+    }
+    .regularHomeButton{
+        grid-area: home-nav;
+        background: black;
+        width: 100vw;
+    }    
+    .regularHomeButton a{
+
+      left: 55%;
+      
+    }  
+    .ScrollButtons{
+  
+      left: 15%;
+  
+      
+    }  
+    .mobileNavButton{
+        grid-area: home-nav;
+        display: none;
+        left: 90%;
+    }
+
+    .restOfNavButtons {
+        display: none;
+        flex-direction: column;
+        grid-area: kontent;
+        
+    }
+  }
